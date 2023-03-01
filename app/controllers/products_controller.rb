@@ -4,18 +4,18 @@ class ProductsController < ApplicationController
     render template: "products/index"
   end
 
-  def shirts
-    @product = Product.find_by(name: "T-shirt")
+  def one_product
+    @product = Product.find_by(id: params[:id])
     render template: "products/show"
   end
 
-  def pants
-    @product = Product.find_by(name: "Blue Jeans")
-    render template: "products/show"
-  end
+  # def pants
+  #   @product = Product.find_by(name: params[:name])
+  #   render template: "products/show"
+  # end
 
-  def hats
-    @product = Product.find_by(name: "Hat")
-    render template: "products/show"
-  end
+  # def hats
+  #   @product = Product.find_by(name: "Hat")
+  #   render template: "products/show"
+  # end
 end
