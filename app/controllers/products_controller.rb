@@ -10,12 +10,13 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.create(
-      name: "Socks",
-      price: 8,
-      image_url: "https://cdn.pixabay.com/photo/2016/12/14/11/34/socks-1906060_1280.jpg",
-      description: "Do not wear with sandals",
+    @product = Product.new(
+      name: params[:name],
+      price: params[:price],
+      image_url: params[:image_url],
+      description: params[:description],
     )
+    @product.save
     render :show
   end
 end
