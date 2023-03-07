@@ -13,4 +13,7 @@ class Product < ApplicationRecord
   end
 
   validates :name, presence: true, uniqueness: true, length: { maximum: 12 }
+  validates :price, presence: true, numericality: { greater_than: 0 }
+  validates :description, presence: true, length: { in: 10..500 }
+  validates :inventory, presence: true, numericality: { greater_than: 0 }
 end
