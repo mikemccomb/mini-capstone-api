@@ -11,4 +11,6 @@ class Product < ApplicationRecord
   def total
     total = price + tax
   end
+
+  validates :name, presence: true, uniqueness: true, length: { maximum: 12 }
 end
