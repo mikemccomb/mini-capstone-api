@@ -12,8 +12,12 @@ class Product < ApplicationRecord
     total = price + tax
   end
 
-  validates :name, presence: true, uniqueness: true, length: { maximum: 12 }
-  validates :price, presence: true, numericality: { greater_than: 0 }
-  validates :description, presence: true, length: { in: 10..500 }
-  validates :inventory, presence: true, numericality: { greater_than: 0 }
+  def supplier
+    Supplier.find_by(id: supplier_id)
+  end
+
+  # validates :name, presence: true, uniqueness: true, length: { maximum: 12 }
+  # validates :price, presence: true, numericality: { greater_than: 0 }
+  # validates :description, presence: true, length: { in: 10..500 }
+  # validates :inventory, presence: true, numericality: { greater_than: 0 }
 end
