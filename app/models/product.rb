@@ -12,13 +12,14 @@ class Product < ApplicationRecord
     total = price + tax
   end
 
-  def supplier
-    Supplier.find_by(id: supplier_id)
-  end
-
-  def image
-    Image.find_by(id: image_id)
-  end
+  belongs_to :supplier
+  # def supplier
+  #   Supplier.find_by(id: supplier_id)
+  # end
+  has_many :images
+  # def image
+  #   Image.find_by(id: image_id)
+  # end
 
   # validates :name, presence: true, uniqueness: true, length: { maximum: 12 }
   # validates :price, presence: true, numericality: { greater_than: 0 }
