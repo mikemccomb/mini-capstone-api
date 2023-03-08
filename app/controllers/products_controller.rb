@@ -13,12 +13,13 @@ class ProductsController < ApplicationController
     @product = Product.new(
       name: params[:name],
       price: params[:price],
-      image_url: params[:image_url],
+      # images: params[:image_url],
       description: params[:description],
     )
     @product.save
 
     if @product.valid?
+      Image.create(product_id: @product_id, url: params[:image_url])
       render :show
     else
       @product.errors.full_messages
@@ -31,7 +32,7 @@ class ProductsController < ApplicationController
     @product.update(
       name: params[:name] || @product.name,
       price: params[:price] || @product.price,
-      image_url: params[:image_url] || @product.image_url,
+      # image_url: params[:image_url] || @product.image_url,
       description: params[:description] || @product.description,
     )
     if @product.valid?
