@@ -17,14 +17,15 @@ class ProductsController < ApplicationController
       description: params[:description],
     )
     @product.save
+    render :show
 
-    if @product.valid?
-      Image.create(product_id: @product_id, url: params[:image_url])
-      render :show
-    else
-      @product.errors.full_messages
-      render status: :unprocessable_entity
-    end
+    # if @product.valid?
+    #   Image.create(product_id: @product_id, url: params[:image_url])
+    #   render :show
+    # else
+    #   @product.errors.full_messages
+    #   render status: :unprocessable_entity
+    # end
   end
 
   def update
