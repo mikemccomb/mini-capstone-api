@@ -53,6 +53,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem 'rack-cors'
   gem 'seed_dump'
+  gem 'jwt'
 end
 
 group :development do

@@ -7,3 +7,12 @@ Content-Type: application/json
   "password": "aluminum",
   "password_confirmation": "aluminum"
 }
+
+###
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "mike@fakeyfakefake.com",
+  "password": "aluminum"
+}
