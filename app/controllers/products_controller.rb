@@ -15,6 +15,7 @@ class ProductsController < ApplicationController
       price: params[:price],
       # images: params[:image_url],
       description: params[:description],
+      supplier_id: params[:supplier_id],
     )
     @product.save
     render :show
