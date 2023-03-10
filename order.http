@@ -5,8 +5,15 @@ Content-Type: application/json
   "user_id": 1,
   "product_id": 1,
   "quantity": 1,
+  "subtotal": 9,
+  "tax": 9,
+  "total": 6
 }
 
 ###
 
-GET http://localhost:3000/products.json
+GET http://localhost:3000/orders.json
+
+###
+
+GET http://localhost:3000/orders/1.json
