@@ -17,7 +17,7 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
   test "create" do
     assert_difference "Order.count", 1 do
       post "/orders.json",
-        params: { product_id: Product.first.id, quantity: 10 },
+        params: { product_id: Product.first.id, quantity: @order.quantity, subtotal: @product.price, tax: @product.tax, total: @product.total },
         headers: { "Authorization" => "Bearer #{@jwt}" }
       assert_response 200
     end
@@ -28,6 +28,6 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
     assert_response 200
 
     data = JSON.parse(response.body)
-    assert_equal ["id", "quantity", "subtotal", "tax", "total", "product", "created_at", "updated_at"], data.keys
+    assert_equal ["id", "user_id", "user", "product_id", "product", "quantity", "subtotal", "tax", "total", "created_at", "updated_at"], data.keys
   end
 end

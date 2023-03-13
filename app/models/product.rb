@@ -3,6 +3,10 @@ class Product < ApplicationRecord
     price <= 10 ? true : false
   end
 
+  def subtotal
+    subtotal = price * @order.quantity
+  end
+
   def tax
     tax = price * 0.09
   end
