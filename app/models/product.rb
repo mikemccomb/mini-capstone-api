@@ -1,4 +1,10 @@
 class Product < ApplicationRecord
+  belongs_to :supplier
+  has_many :images
+  has_many :orders
+  has_many :category_products
+
+
   def is_discounted?
     price <= 10 ? true : false
   end
@@ -15,7 +21,4 @@ class Product < ApplicationRecord
     total = price + tax
   end
 
-  belongs_to :supplier
-  has_many :images
-  has_many :orders
 end
