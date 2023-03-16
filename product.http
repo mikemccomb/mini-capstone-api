@@ -1,5 +1,5 @@
 GET http://localhost:3000/products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg0Nzk1NTV9.8Fv65fk64tSK3Se8AOnuMe2S31rwYt6M0PgDGizMjlk
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzkwNzY1OTV9.YEctyeevtsSUgtnRW1PvE1YfMIkCE-xUAeO-giBKUko
 Content-Type: application/json
 
 ###
