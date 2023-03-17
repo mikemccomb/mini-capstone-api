@@ -1,15 +1,11 @@
 
 POST http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzkxNTY0NDB9.-Y7tf3A6RnJzgu2uja-K78HxcIZxbIja9EqMlbde2AA
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzkxNTc2MzV9.QBmWfCYtUCwUvF5MzG1FEUHRRv-k1WdaoTNz6nmhfRo
 Content-Type: application/json
 
 {
   "user_id": 1,
   "product_id": 1,
-  "quantity": 1,
-  "subtotal": 9,
-  "tax": 9,
-  "total": 6
 }
 
 ###
@@ -20,4 +16,4 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3000/orders/1.json
+GET http://localhost:3000/orders.json
