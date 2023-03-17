@@ -1,7 +1,8 @@
 POST http://localhost:3000/carted_products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzkwNzY4MDR9.ywtlUXBblEqdW0M--BRUBEbn5lXq_6VvFskr16DWpx4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzkxNTc2MzV9.QBmWfCYtUCwUvF5MzG1FEUHRRv-k1WdaoTNz6nmhfRo
 Content-Type: application/json
 
+# Add new item to user's cart
 {
   "product_id": 3,
   "quantity": 4
@@ -10,7 +11,10 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3000/carted_products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzkwNzY4MDR9.ywtlUXBblEqdW0M--BRUBEbn5lXq_6VvFskr16DWpx4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzkxNTc2MzV9.QBmWfCYtUCwUvF5MzG1FEUHRRv-k1WdaoTNz6nmhfRo
+Content-Type: application/json
+
+# View all carted products
 
 ###
-DELETE http://localhost:3000/carted_products/2.json
+DELETE http://localhost:3000/carted_products/12.json

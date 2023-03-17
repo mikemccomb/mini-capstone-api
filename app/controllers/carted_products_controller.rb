@@ -12,7 +12,14 @@ class CartedProductsController < ApplicationController
 
   def index
     if current_user
-      @carted_products = CartedProduct.all
+      @carted_products = current_user.carted_products
+      carted = []
+      @carted_products.each do |item|
+        if item[:status] == "carted"
+          carted << item
+        end
+      end
+      @carted_products = carted
       render :index
     else
       render json: [], status: :unauthorized
@@ -21,7 +28,7 @@ class CartedProductsController < ApplicationController
 
   def destroy
     @carted_product = CartedProduct.find_by(id: params[:id])
-    @carted_product[:status] = "removed"
+    @carted_product.update(status: "removed")
     render json: { message: "Removed from cart" }
   end
 end

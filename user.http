@@ -2,8 +2,8 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Mike",
-  "email": "mike@fakeyfakefake.com",
+  "name": "bob",
+  "email": "bob@fakeyfakefake.com",
   "password": "aluminum",
   "password_confirmation": "aluminum"
 }
@@ -13,6 +13,8 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "mike@fakeyfakefake.com",
+  "email": "bob@fakeyfakefake.com",
   "password": "aluminum"
 }
+
+# JWT: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzkxNTc2MzV9.QBmWfCYtUCwUvF5MzG1FEUHRRv-k1WdaoTNz6nmhfRo
